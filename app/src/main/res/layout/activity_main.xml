@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    tools:context="com.yedona.a4playerreactor.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_bg_2"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="快速游戏"
+            android:textColor="#fff"
+            android:id="@+id/t1"
+            android:textSize="48dp"
+            android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@id/t1"
+        android:id="@+id/quick"
+        android:text="单人游戏"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_bg">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="四人反应堆"
+            android:textColor="#000"
+            android:textSize="32dp" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:onClick="setPlay1"
+                android:id="@+id/r1"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg_2">
+
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="1"
+                    android:textColor="#fff"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="玩家"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/r2"
+                android:layout_margin="2dp"
+                android:onClick="setPlay2"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="2"
+                    android:textColor="#716f6f"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv2"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+
+                    android:layout_marginBottom="5dp"
+                    android:text="玩家"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:onClick="setPlay3"
+                android:layout_weight="1"
+                android:id="@+id/r3"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_bg">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="3"
+                    android:textColor="#716f6f"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="玩家"
+                    android:visibility="gone"
+
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/r4"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:onClick="setPlay4"
+                android:background="@drawable/btn_bg">
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="4"
+                    android:textColor="#716f6f"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="玩家"
+                    android:visibility="gone"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll"
+            android:layout_marginRight="20dp"
+            android:onClick="setModel"
+            android:background="@drawable/btn_bg_2"
+            android:gravity="center"
+            android:text="简单?"
+            android:id="@+id/modeltv"
+            android:textColor="#fff"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_bg_2"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="游戏设定"
+        android:textColor="#fff"
+        android:textSize="48dp"
+        android:textStyle="bold" />
+</LinearLayout>
